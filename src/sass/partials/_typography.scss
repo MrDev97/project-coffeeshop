@@ -12,13 +12,19 @@
 }
 
 .h3 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: $font-semibold;
   text-transform: uppercase;
 }
 
 .h4 {
-  font-size: 26px;
+  font-size: 24px;
+  font-weight: $font-semibold;
+  text-transform: uppercase;
+}
+
+.h5 {
+  font-size: 12px;
   font-weight: $font-semibold;
   text-transform: uppercase;
 }
