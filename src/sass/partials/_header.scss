@@ -1,12 +1,45 @@
-header {
+.header {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
   position: relative;
-  background-color: black;
+  background-color: $color-dark;
+  z-index: 0;
+
+  &__background {
+    position: absolute;
+    opacity: 0.4;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /*&::before {
+      content: '';
+      position: absolute;
+      background-color: $color-dark;
+  }*/
+
+  .logo {
+      color: $color-light;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+  }
 }
 
-header::before {
+.row {
+    align-items: center;
+
+    .header__wrapper {
+        text-align: left;
+    }
+
+    .nav__wrapper {
+        text-align: right;
+    }
+}
+
+/*header::before {
   content: '';
   position: absolute;
   background-image: url(../../images/background.png);
@@ -18,7 +51,7 @@ header::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.4;
-}
+}*/
 
 /*.header__background {
   width: 100%;
