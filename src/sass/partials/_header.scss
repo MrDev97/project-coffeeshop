@@ -14,54 +14,106 @@
     z-index: -1;
   }
 
-  /*&::before {
-      content: '';
-      position: absolute;
-      background-color: $color-dark;
-  }*/
+  .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
 
   .logo {
-      color: $color-light;
-      text-transform: uppercase;
-      letter-spacing: 5px;
+    color: $color-light;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    h4 {
+    margin-bottom: 0;
+   }
+
+    h5 {
+    margin-top: 0;
+   }
+  }
+
+  .nav__wrapper {
+    font-size: 16px;
+
+    a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-grey;
+    margin-right: 24px;
+    font-weight: $font-regular;
+    }
   }
 }
 
 .row {
-    align-items: center;
+  align-items: center;
 
-    .header__wrapper {
-        text-align: left;
-    }
+  &__title {
+      flex: 2;
+  }
 
-    .nav__wrapper {
-        text-align: right;
+  .header__wrapper {
+    text-align: left;
+  }
+
+  .nav__wrapper {
+    text-align: right;
+  }
+
+  .title__wrapper {
+    text-align: center;
+
+    h1 {
+        color: $color-main;
+        margin: 0;
+        line-height: 1.1;
+        letter-spacing: 14px;
+
+        &:first-child {
+            text-align: left;
+            }
+        }
+
+        &::after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        width: 250px;
+        height: 10px;
+        transform: translateX(-50%);
+        margin-top: 34px;
+        background: $color-main; 
     }
+  }
+
+  .button__wrapper {
+    display: flex;
+    justify-content: center;
+}
 }
 
-/*header::before {
-  content: '';
-  position: absolute;
-  background-image: url(../../images/background.png);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.4;
-}*/
 
-/*.header__background {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  position: relative;
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    filter: invert(100%);
+    cursor: pointer;
+    transition: 1s;
+
+        h4 {
+            margin: 0 0 15px 0;
+            letter-spacing: 6px;
+            font-weight: $font-regular;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
 }
 
-.header__wrapper, 
-.nav__wrapper,
-.splash__wrapper {
-    position: absolute;
-}*/
