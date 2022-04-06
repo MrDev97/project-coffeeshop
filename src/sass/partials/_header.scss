@@ -15,9 +15,9 @@
   }
 
   .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .logo {
@@ -26,23 +26,23 @@
     letter-spacing: 5px;
 
     h4 {
-    margin-bottom: 0;
-   }
+      margin-bottom: 0;
+    }
 
     h5 {
-    margin-top: 0;
-   }
+      margin-top: 0;
+    }
   }
 
   .nav__wrapper {
     font-size: 16px;
 
     a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $color-grey;
-    margin-right: 24px;
-    font-weight: $font-regular;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-grey;
+      margin-right: 24px;
+      font-weight: $font-regular;
     }
   }
 }
@@ -51,7 +51,7 @@
   align-items: center;
 
   &__title {
-      flex: 2;
+    flex: 2;
   }
 
   .header__wrapper {
@@ -66,54 +66,58 @@
     text-align: center;
 
     h1 {
-        color: $color-main;
-        margin: 0;
-        line-height: 1.1;
-        letter-spacing: 14px;
+      color: $color-main;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 14px;
 
-        &:first-child {
-            text-align: left;
-            }
-        }
+      &:first-child {
+        text-align: left;
+      }
+    }
 
-        &::after{
-        position: absolute;
-        content: '';
-        left: 50%;
-        width: 250px;
-        height: 10px;
-        transform: translateX(-50%);
-        margin-top: 34px;
-        background: $color-main; 
+    &::after{
+      position: absolute;
+      content: '';
+      left: 50%;
+      width: 20vw;
+      height: 7px;
+      transform: translateX(-50%);
+      margin-top: 34px;
+      background: $color-main; 
     }
   }
 
   .button__wrapper {
     display: flex;
     justify-content: center;
-}
+  }
 }
 
 
 .btn {
-    display: inline-block;
-    background-color: transparent;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    filter: invert(100%);
-    cursor: pointer;
-    transition: 1s;
+  display: inline-block;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 5vh;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: 1s;
 
-        h4 {
-            margin: 0 0 15px 0;
-            letter-spacing: 6px;
-            font-weight: $font-regular;
-        }
+  span {
+    margin: 0 0 15px 0;
+    letter-spacing: 6px;
+    font-weight: $font-regular;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+  }
 
-        img {
-            height: 50px;
-            width: 50px;
-        }
+  img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
