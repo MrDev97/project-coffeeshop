@@ -23,7 +23,7 @@
        {
           "id":"3",
           "name":"La Cucaracha",
-          "description":"Sweet and intense with a big amount of different flavors. Carmel, grapes, strawberry, you name it! It's a great choice for warm summer days",
+          "description":"Sweet and intense with a big amount of different flavors. Carmel, grapes, strawberry, you name it! It's a great choice for warm summer days.",
           "image": "<img src=\"images/coffee/coffee-3\">",
           "params": {
             "roasting": 3,
