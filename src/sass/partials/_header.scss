@@ -1,23 +1,12 @@
 .header {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: $color-dark;
-  z-index: 0;
+  @include section-background-relative;
 
   &__background {
-    position: absolute;
-    opacity: 0.4;
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
+    @include section-background-absolute;
   }
 
   .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    @include container-settings;
   }
 
   .logo {
@@ -77,14 +66,9 @@
     }
 
     &::after{
-      position: absolute;
-      content: '';
-      left: 50%;
+      @include title-bar;
       width: 20vw;
-      height: 7px;
-      transform: translateX(-50%);
       margin-top: 34px;
-      background: $color-main; 
     }
   }
 
@@ -96,15 +80,7 @@
 
 
 .btn {
-  display: inline-block;
-  background-color: transparent;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  margin-bottom: 5vh;
-  filter: invert(100%);
-  cursor: pointer;
-  transition: 1s;
+  @include button-background;
 
   span {
     margin: 0 0 15px 0;

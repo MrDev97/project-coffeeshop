@@ -2,20 +2,10 @@
   margin-bottom: 10vh;
 
   &__title{
-    text-align: center;
-    position: relative;
-    color: $color-main;
-    letter-spacing: 5px;
+    @include section-title;
 
     &::after{
-      position: absolute;
-      content: '';
-      left: 50%;
-      width: 40vw;
-      height: 7px;
-      transform: translateX(-50%);
-      margin-top: 87px;
-      background: $color-main; 
+      @include title-bar;
     }
   }
 }
@@ -48,13 +38,7 @@
     margin: 0 0 7% 0;
 
     &::before {
-      position: absolute;
-      content: "";
-      width: 10vw;
-      min-width: 140px;
-      height: 7px;
-      transform: translate(-110%, 120%);
-      background: #bea67c;
+      @include title-bar-gallery;
     }
 
 
@@ -71,14 +55,7 @@
   }
 
   .most-popular::after {
-    position: absolute;
-    display: block;
-    content: "";
-    background: url(../../images/most-popular.png) no-repeat 0 0;
-    background-size: 100%;
-    width: 120px;
-    height: 120px;
-    transform: translate(110%, 20%);
+    @include icon-most-popular;
   }
 }
 
