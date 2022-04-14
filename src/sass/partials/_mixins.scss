@@ -60,7 +60,7 @@
   transform: translate(110%, 20%);
 }
 
-@mixin button-background {
+@mixin button {
   display: inline-block;
   background-color: transparent;
   text-align: center;
@@ -70,4 +70,18 @@
   filter: invert(100%);
   cursor: pointer;
   transition: 1s;
+
+  span {
+    margin: 0 0 15px 0;
+    letter-spacing: 6px;
+    font-weight: $font-regular;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
 }
