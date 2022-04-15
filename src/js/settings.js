@@ -1,23 +1,23 @@
 export const select = {
   templateOf: {
-    galleryProduct: '#template-gallery-product',
+    product: '#template-product',
   },
   containerOf: {
     pages: '#pages',
-    home: '#home__page',
+    productsGalleryHome: '#productsGallery__home',
     products: '#products__page',
     contact: '#contact__page',
   },
   all: {
     products: '#products > .product__wrapper',
   },
-  galleryProduct: {
+  product: {
     wrapper: '.product__wrapper',
     name: '.product__name',
     description: '.product__description',
     roasting: '.product__roasting',
     intensity: '.product__intensity',
-    image: '.product__intensity',
+    image: '.product__image',
   },
   nav: {
     links: '.nav__wrapper a',
@@ -51,7 +51,7 @@ export const settings = {
 };
 
 export const templates = {
-  galleryProduct: Handlebars.compile(
-    document.querySelector(select.templateOf.galleryProduct).innerHTML
+  product: Handlebars.compile(
+    document.querySelector(select.templateOf.product).innerHTML
   ),
 };

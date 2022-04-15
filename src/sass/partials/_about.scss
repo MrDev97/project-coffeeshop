@@ -1,14 +1,6 @@
 .about {
   @include section-background-relative;
   
-  &__title{
-    @include section-title;
-
-    &::after{
-      @include title-bar;
-    }
-  }
-
   &__background {
     @include section-background-absolute;
   }
@@ -32,7 +24,7 @@
     color: $color-light;
     line-height: 1.4;
     letter-spacing: 2px;
-    margin-top: 5vh;
+    margin: 0;
 
     &:last-child {
       text-align: right;

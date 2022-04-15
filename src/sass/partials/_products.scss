@@ -1,18 +1,7 @@
-.gallery {
-  margin-bottom: 10vh;
-
-  &__title{
-    @include section-title;
-
-    &::after{
-      @include title-bar;
-    }
-  }
-}
-
 .product__wrapper {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-top: 5%;
 
   &.reverse {
@@ -38,7 +27,7 @@
     margin: 0 0 7% 0;
 
     &::before {
-      @include title-bar-gallery;
+      @include title-bar-section;
     }
   }
     
