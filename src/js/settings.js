@@ -4,12 +4,12 @@ export const select = {
   },
   containerOf: {
     pages: '#pages',
-    productsGalleryHome: '#productsGallery__home',
-    products: '#products__page',
-    contact: '#contact__page',
+    productsGalleryHome: '#home__gallery > .container',
+    products: '#products',
+    contact: '#contact',
   },
   all: {
-    products: '#products > .product__wrapper',
+    products: '.product__wrapper',
   },
   product: {
     wrapper: '.product__wrapper',
