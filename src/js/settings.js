@@ -5,11 +5,12 @@ export const select = {
   containerOf: {
     pages: '#pages',
     productsGalleryHome: '#home__gallery > .container',
+    productsGalleryProducts: '#products__gallery > .container',
     products: '#products',
     contact: '#contact',
   },
   all: {
-    products: '.product__wrapper',
+    homeProducts: '#home > .product__wrapper',
   },
   product: {
     wrapper: '.product__wrapper',

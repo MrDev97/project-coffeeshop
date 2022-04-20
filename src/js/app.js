@@ -1,4 +1,4 @@
-import { settings } from './settings.js';
+import { settings, select } from './settings.js';
 import Product from './components/Product.js';
 
 const app = {
@@ -28,11 +28,34 @@ const app = {
   initGallery: function () {
     const thisApp = this;
 
+    let productList = [];
+
     for (let productData in thisApp.data.products) {
       new Product(
         thisApp.data.products[productData].id,
         thisApp.data.products[productData]
       );
+
+      productList.push(thisApp.data.products[productData].name);
+    }
+
+    const productSelector = document.querySelectorAll(select.product.name);
+
+    for (let product of productSelector) {
+      const productName = product.innerHTML;
+
+      const productIndex = productList.indexOf(productName) + 1;
+
+      const productToStr = productIndex.toString();
+
+      const adjNum = productToStr.padStart(2, '0');
+
+      const productNumtoTxt = product.insertAdjacentHTML(
+        'afterbegin',
+        adjNum + '.' + ' '
+      );
+
+      console.log(productNumtoTxt);
     }
   },
 };

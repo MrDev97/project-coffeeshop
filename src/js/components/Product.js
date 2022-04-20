@@ -8,22 +8,37 @@ class Product {
     thisProduct.id = id;
     thisProduct.data = data;
 
-    thisProduct.renderInMenu();
+    thisProduct.renderInHome();
+    thisProduct.renderInProducts();
     thisProduct.getElements();
   }
 
-  renderInMenu() {
+  renderInHome() {
     const thisProduct = this;
 
     const generatedHTML = templates.product(thisProduct.data);
 
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
 
-    const productContainer = document.querySelector(
+    const homeGalleryContainer = document.querySelector(
       select.containerOf.productsGalleryHome
     );
 
-    productContainer.appendChild(thisProduct.element);
+    homeGalleryContainer.appendChild(thisProduct.element);
+  }
+
+  renderInProducts() {
+    const thisProduct = this;
+
+    const generatedHTML = templates.product(thisProduct.data);
+
+    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+
+    const productsGalleryContainer = document.querySelector(
+      select.containerOf.productsGalleryProducts
+    );
+
+    productsGalleryContainer.appendChild(thisProduct.element);
   }
 
   getElements() {
