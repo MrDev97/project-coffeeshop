@@ -25,6 +25,7 @@ export const select = {
   },
   section: {
     home: 'home',
+    products: 'products',
   },
   button: {
     discover: 'discover',

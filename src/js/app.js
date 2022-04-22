@@ -56,7 +56,10 @@ const app = {
     const discoverButton = document.getElementById(select.button.discover);
 
     discoverButton.addEventListener('click', function (event) {
-      const clickedElement = document.getElementById(select.section.home);
+      const idFromHash = window.location.hash.replace('#/', '');
+
+      const clickedElement = document.getElementById(idFromHash);
+
       event.preventDefault();
 
       clickedElement.scrollIntoView({
