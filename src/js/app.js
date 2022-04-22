@@ -33,6 +33,8 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
+
+    thisApp.initButtons();
   },
 
   activatePage: function (pageId) {
@@ -48,6 +50,20 @@ const app = {
         link.getAttribute('href') == '#' + pageId
       );
     }
+  },
+
+  initButtons: function () {
+    const discoverButton = document.getElementById(select.button.discover);
+
+    discoverButton.addEventListener('click', function (event) {
+      const clickedElement = document.getElementById(select.section.home);
+      event.preventDefault();
+
+      clickedElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
   },
 
   initData: function () {
@@ -110,9 +126,6 @@ const app = {
 
       if (productIndex % 2 == 0) {
         productWrapper.classList.add(classNames.product.rowReverse);
-
-        console.log(productWrapper);
-        console.log(productList);
       }
 
       const productDescription = product.nextElementSibling;

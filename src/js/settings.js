@@ -23,6 +23,12 @@ export const select = {
   nav: {
     links: '.nav__wrapper a',
   },
+  section: {
+    home: 'home',
+  },
+  button: {
+    discover: 'discover',
+  },
 };
 
 export const classNames = {
