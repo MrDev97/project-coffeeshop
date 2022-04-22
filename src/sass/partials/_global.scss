@@ -26,3 +26,13 @@ body {
     @include title-bar;
   }
 }
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
