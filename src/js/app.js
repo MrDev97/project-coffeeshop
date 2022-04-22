@@ -1,4 +1,4 @@
-import { settings, select } from './settings.js';
+import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
 
 const app = {
@@ -39,9 +39,9 @@ const app = {
       productList.push(thisApp.data.products[productData].name);
     }
 
-    const productSelector = document.querySelectorAll(select.product.name);
+    const productNameSelector = document.querySelectorAll(select.product.name);
 
-    for (let product of productSelector) {
+    for (let product of productNameSelector) {
       const productName = product.innerHTML;
 
       const productIndex = productList.indexOf(productName) + 1;
@@ -54,8 +54,22 @@ const app = {
         'afterbegin',
         adjNum + '.' + ' '
       );
-
       console.log(productNumtoTxt);
+
+      const productWrapper = product.parentElement.parentElement;
+
+      if (productIndex % 2 == 0) {
+        productWrapper.classList.add(classNames.product.rowReverse);
+
+        console.log(productWrapper);
+        console.log(productList);
+      }
+
+      const productDescription = product.nextElementSibling;
+
+      if (productIndex == 1) {
+        productDescription.classList.add(classNames.product.mostPopular);
+      }
     }
   },
 };

@@ -13,12 +13,18 @@ class Product {
     thisProduct.getElements();
   }
 
-  renderInHome() {
+  renderProduct() {
     const thisProduct = this;
 
     const generatedHTML = templates.product(thisProduct.data);
 
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+  }
+
+  renderInHome() {
+    const thisProduct = this;
+
+    thisProduct.renderProduct();
 
     const homeGalleryContainer = document.querySelector(
       select.containerOf.productsGalleryHome
@@ -30,9 +36,7 @@ class Product {
   renderInProducts() {
     const thisProduct = this;
 
-    const generatedHTML = templates.product(thisProduct.data);
-
-    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+    thisProduct.renderProduct();
 
     const productsGalleryContainer = document.querySelector(
       select.containerOf.productsGalleryProducts
