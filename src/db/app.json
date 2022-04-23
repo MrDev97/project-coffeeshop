@@ -30,5 +30,25 @@
             "intensity": 7
           }
        }
-    ]
+    ],
+    "contact":[
+      {
+         "id":"1",
+         "name":"La Lagartija",
+         "title":"Mysterious and treacherous...",
+         "text":"The best choice for the start of your journey! It will provide you a rich delicious flavor."
+      },
+      {
+         "id":"2",
+         "name":"El Tigre",
+         "title":"Really dark coffee, only for the real gourmets.",
+         "text": "It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with carmel."
+      },
+      {
+         "id":"3",
+         "name":"La Cucaracha",
+         "title":"Sweet and intense",
+         "text": "Big amount of different flavors. Carmel, grapes, strawberry, you name it! It's a great choice for warm summer days."
+      }
+   ]
 }

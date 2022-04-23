@@ -85,3 +85,22 @@
     width: 50px;
   }
 }
+
+@mixin form-button {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 0;
+  font-family: $font-text;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: $font-semibold;
+  letter-spacing: 5px;
+  color: $color-light;
+  cursor: pointer;
+  border: 2px solid $color-main;
+  background-color: $color-main;
+}

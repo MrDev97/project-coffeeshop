@@ -1,5 +1,6 @@
 import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
+import Contact from './components/Contact.js';
 
 const app = {
   initPages: function () {
@@ -56,9 +57,13 @@ const app = {
     const discoverButton = document.getElementById(select.button.discover);
 
     discoverButton.addEventListener('click', function (event) {
-      const idFromHash = window.location.hash.replace('#/', '');
+      let idFromHash = window.location.hash.replace('#/', '');
 
-      const clickedElement = document.getElementById(idFromHash);
+      let clickedElement = document.getElementById(idFromHash);
+
+      if (clickedElement == null) {
+        clickedElement = document.getElementById(select.section.home);
+      }
 
       event.preventDefault();
 
@@ -87,11 +92,22 @@ const app = {
       });
   },
 
+  initContact: function () {
+    const thisApp = this;
+
+    thisApp.contactContainer = document.querySelector(
+      select.containerOf.contact
+    );
+
+    thisApp.contact = new Contact(thisApp.contactContainer);
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initPages();
     thisApp.initData();
+    thisApp.initContact();
   },
 
   initGallery: function () {

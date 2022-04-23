@@ -1,6 +1,7 @@
 export const select = {
   templateOf: {
     product: '#template-product',
+    contact: '#template-contact',
   },
   containerOf: {
     pages: '#pages',
@@ -19,6 +20,12 @@ export const select = {
     roasting: '.product__roasting',
     intensity: '.product__intensity',
     image: '.product__image',
+  },
+  contact: {
+    submitContact: '.contact__form',
+    name: '[name="name"]',
+    title: '[name="title"]',
+    text: '[name="message"]',
   },
   nav: {
     links: '.nav__wrapper a',
@@ -55,11 +62,16 @@ export const settings = {
       (window.location.hostname == 'localhost' ? ':3131' : ''),
     products: 'products',
     product: 'product',
+    contacts: 'contacts',
+    contact: 'contact',
   },
 };
 
 export const templates = {
   product: Handlebars.compile(
     document.querySelector(select.templateOf.product).innerHTML
+  ),
+  contact: Handlebars.compile(
+    document.querySelector(select.templateOf.contact).innerHTML
   ),
 };
