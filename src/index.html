@@ -12,35 +12,33 @@
 
   <header class="header">
     <img class="header__background" src="./images/background.png" alt="background">
-    <div class="container">
-      <div class="row">
-        <div class="header__wrapper col-md-4 navbar-brand">
-          <div class="logo">
-            <h4 class="logo__title"><span>El Tigre</span></h4>
-            <h5 class="logo__subtitle">Venezuela Coffee Beans</h5>
-          </div>
+    <div class="header__wrapper container">
+      <nav class="nav__wrapper navbar fixed-top navbar-expand-md navbar-dark bg-black">
+        <a class="logo navbar-brand" href="#home">
+          <h4 class="logo__title"><span>El Tigre</span></h4>
+          <h5 class="logo__subtitle">Venezuela Coffee Beans</h5>
+        </a>
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#mobile-menu"
+                aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile-menu">
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#products">Products</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <nav class="nav__wrapper col-md-8 navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mobile-menu">
-            <ul class="navbar-nav">
-              <li><a class="nav-link" href="#home">Home</a></li>
-              <li><a class="nav-link" href="#products">Products</a></li>
-              <li><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-          </div>  
-        </nav>
-      </div>
+      </nav>
       <div class="row row__title">
-        <div class="title__wrapper col-md-12">
+        <div class="title__wrapper">
           <h1>Home of</h1>
           <h1>Original Tastes</h1>
         </div>
       </div>
       <div class="row">
-        <div class="button__wrapper col-md-12">
+        <div class="button__wrapper">
           <button type="submit" id="discover" class="btn btn-one">
             <span>Discover</span>
             <img src="./images/circle-down-regular.svg" alt="circle-down">

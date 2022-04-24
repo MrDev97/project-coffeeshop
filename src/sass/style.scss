@@ -7,9 +7,10 @@
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
 @import "bootstrap/grid";
-@import "bootstrap/navbar";
-@import "bootstrap/nav";
 @import "bootstrap/transitions";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/utilities/api";
 
 // settings
 @import 'partials/settings';
@@ -20,6 +21,7 @@
 @import 'partials/global';
 @import 'partials/typography';
 @import 'partials/header';
+@import 'partials/navbar';
 @import 'partials/products';
 @import 'partials/about';
 @import 'partials/contact';
