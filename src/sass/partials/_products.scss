@@ -32,6 +32,7 @@
 
     &::before {
       @include title-bar-section;
+      width: 154px;
     }
   }
     
